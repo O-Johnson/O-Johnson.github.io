@@ -1,0 +1,348 @@
+:root {
+  --button-color1: rgb(240, 95, 43);
+  --button-color2: rgb(52, 53, 56);
+  --button-color3: rgb(170, 171, 173);
+  --button-color4: rgb(250, 194, 174);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #d8d8ca;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  background-color: bisque;
+  width: 100vw;
+  align-items: center;
+  padding: 10px 0;
+  nav {
+    a {
+      margin-right: 2em;
+      button {
+        background-color: var(--button-color1);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 2px;
+        cursor: pointer;
+        color: bisque;
+        font-size: 100%;
+      }
+      button:hover {
+        background-color: var(--button-color4);
+        color: rgb(10, 1, 1);
+      }
+    }
+    a:last-of-type {
+      margin-right: unset;
+    }
+  }
+}
+
+main {
+  margin-top: 20vh;
+  color: rgb(48, 21, 11);
+  font-family: helvetica, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  #email {
+    margin-bottom: 1rem;
+    height: 5vh;
+    padding: 0 7px;
+  }
+  #submit {
+    margin-bottom: 1rem;
+    padding: 5px 10px;
+    background-color: var(--button-color1);
+    border: none;
+    cursor: pointer;
+    color: bisque;
+    border-radius: 2px;
+  }
+  #submit:hover {
+    background-color: var(--button-color4);
+    color: rgb(10, 1, 1);
+  }
+}
+
+#how-it-works {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  #video {
+    width: 560px; 
+    height: 315px; 
+  }
+}
+
+#pricing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 2rem 4rem 1rem 4rem;
+  div {
+    width: 250px;
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+      height: 70%;
+      display: block;
+      border-radius: 5px;
+    }
+    figcaption {
+      text-align: justify;
+      margin: 1rem 0 0 0;
+      font-size: 14px;
+      span {
+        font-size: 30px;
+        display: block;
+      }
+    }
+    button {
+      background-color: var(--button-color2);
+      border: none;
+      cursor: pointer;
+      color: rgb(245, 237, 228);
+      border-radius: 2px;
+      padding: 5px 10px;
+    }
+    button:hover {
+      background-color: var(--button-color3);
+      color: rgb(12, 8, 8);;
+    }
+  }
+}
+
+#more-items {
+  display: flex;
+  margin-bottom: 1rem;
+  button {
+    margin: 0 auto;
+    background-color: var(--button-color1);
+    border: none;
+    cursor: pointer;
+    color: rgb(245, 237, 228);
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  button:hover {
+    background-color: var(--button-color4);
+    color: rgb(12, 8, 8);;
+  }
+}
+
+footer {
+  background-color: var(--button-color2);
+  color: rgb(241, 238, 233);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 0;
+  fieldset {
+    border: none;
+    margin: 0;
+    legend {
+      margin: 0;
+      font-size: 20px;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0 0 0 -2.4em;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media only screen and (max-width: 1155px) and (min-width: 655px) {
+  header {
+    nav {
+      a {
+        margin-right: 1em;
+        button {
+          padding: 10px 10px;
+          font-size: 80%;
+        }
+      }
+      a:last-of-type {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  main {
+    margin-top: 25vh
+  }
+  
+  #pricing {
+    margin: unset;
+    div {
+      width: 150px;
+      margin-bottom: -0.5rem;
+      img {
+        height: 50%;
+        margin-top: 2rem;
+      }
+      figcaption {
+        text-align: unset;
+        font-size: 14px;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  #more-items {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 654px) and (min-width: 399px) {
+  header {
+    img {
+      width: 35%;
+    }
+    nav {
+      a {
+        margin-right: unset;
+        button {
+          padding: 5px 5px;
+          font-size: 60%;
+        }
+      }
+      a:last-of-type {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  main {
+    margin-top: 15vh;
+  }
+  
+  #how-it-works {
+    #video {
+      width: 350px; 
+      height: 200px; 
+    }
+    figcaption {
+      font-size: 14px;
+    }
+  }
+
+  #pricing {
+    margin: unset;
+    div {
+      width: 100px;
+      margin-bottom: -0.5rem;
+      margin-left: 0.5rem;
+      img {
+        height: 30%;
+        margin-top: 1.5rem;
+      }
+      figcaption {
+        text-align: unset;
+        font-size: 13px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  #more-items {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    img {
+      width: 35%;
+    }
+    nav {
+      a {
+        margin-right: unset;
+        button {
+          padding: 5px 5px;
+          font-size: 60%;
+        }
+      }
+    }
+  }
+
+  main {
+    margin-top: 13vh;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  
+  #how-it-works {
+    #video {
+      width: 350px; 
+      height: 200px; 
+    }
+    figcaption {
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #pricing {
+    grid-template-columns: repeat(2, 1fr);
+    margin: unset;
+    div {
+      width: 150px;
+      margin-bottom: -0.5rem;
+      img {
+        height: 50%;
+        margin-top: 1.5rem;
+      }
+      figcaption {
+        text-align: unset;
+        font-size: 13px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  #more-items {
+    margin-top: 1rem;
+  }
+  footer {
+    legend {
+      font-size: 10px;
+    }
+    div {
+      font-size: 12px;
+    }
+  }
+}
