@@ -1,0 +1,180 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 25px;
+  text-align: justify;
+}
+
+main {
+  margin-left: 21%;
+  margin-right: 2%;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #f0ffff;
+  border-right: 1px solid;
+  width: calc(20% - 1em);
+  header {
+    height: 8.5%;
+    margin-top: 1em;
+  }
+  li {
+    align-items: center;
+    margin-bottom: 20px;
+    height: 10%;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }  
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.doc-name{
+  font-size: 40px;
+}
+
+fieldset {
+  border: none;
+  margin-left: -1.2%;
+}
+
+code {
+  background-color: #f0ffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.block-code {
+  display: block;
+  width: fit-content;
+  margin: -1.5em 0 -4em 0;
+  padding-right: 10%;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background-color: #2f3b3b;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 0 0 45%;
+  a {
+    color: #f8fafa;
+    text-decoration: none;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media (max-width: 768px){
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 13em;
+    overflow: hidden;
+  }
+
+  #navbar {
+     position: absolute;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-right: none;
+    height: fit-content;
+    header {
+      margin-top: -1em;
+      margin-bottom: -1em;
+    }
+    ul {
+      li {
+        border-bottom: 1px solid;
+        align-items: center;
+        margin-bottom: unset;
+        height: unset;
+        a {
+          text-decoration: none;
+          font-size: unset;
+        }
+      }
+      li:last-of-type {
+        border-bottom: none;
+        margin-bottom: -1em;
+      }
+    }  
+  }
+
+  .doc-name {
+    font-size: 35px;
+  }
+
+  .block-code.scroll {
+    overflow: scroll;
+    height: 180px;
+    width: 300px;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .no-space {
+    margin-bottom: 1rem;
+  }
+
+  .space {
+    padding-top: 1.5rem;
+  }
+
+  p, legend {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  fieldset {
+    margin-bottom: -2rem;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+#development_tools ul {
+  margin-left: -1.5rem;
+}
+
+@media screen and (max-width: 510px) {
+  .block-code.short-scroll {
+    overflow: scroll;
+    height: 100px;
+    width: 300px;
+  }
+}
